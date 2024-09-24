@@ -1,0 +1,160 @@
+{
+  "info": {
+    "_postman_id": "86663075-fffb-44b1-9a7c-ec4a0580036d",
+    "name": "Inventory management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24244019"
+  },
+  "item": [
+    {
+      "name": "User Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"aditya\",\n  \"password\": \"password123\",\n  \"email\": \"aditya@example.com\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/auth/register/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "auth", "register", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"aditya\",\n  \"password\": \"password123\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/auth/login/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "auth", "login", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3MTk5MTUwLCJpYXQiOjE3MjcxOTU1NTAsImp0aSI6ImJhNTc5NTM0ODkwOTQ1ZTdiN2ZkZWU0ODBkOTBiNjhjIiwidXNlcl9pZCI6Mn0.6_8RoaGA5IbNSoU2yOVETSW6J_Pz92zAIlnW15Adl10",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Mobile\",\n  \"description\": \"Best Smart Mobile\",\n  \"quantity\": 10\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/items/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "items", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Item",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3MTk5MTUwLCJpYXQiOjE3MjcxOTU1NTAsImp0aSI6ImJhNTc5NTM0ODkwOTQ1ZTdiN2ZkZWU0ODBkOTBiNjhjIiwidXNlcl9pZCI6Mn0.6_8RoaGA5IbNSoU2yOVETSW6J_Pz92zAIlnW15Adl10",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Laptop\",\n  \"description\": \"Updated description\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/items/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "items", "1", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Item",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3MTk5MTUwLCJpYXQiOjE3MjcxOTU1NTAsImp0aSI6ImJhNTc5NTM0ODkwOTQ1ZTdiN2ZkZWU0ODBkOTBiNjhjIiwidXNlcl9pZCI6Mn0.6_8RoaGA5IbNSoU2yOVETSW6J_Pz92zAIlnW15Adl10",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/items/2/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "items", "2", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Item",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI3MTk5MTUwLCJpYXQiOjE3MjcxOTU1NTAsImp0aSI6ImJhNTc5NTM0ODkwOTQ1ZTdiN2ZkZWU0ODBkOTBiNjhjIiwidXNlcl9pZCI6Mn0.6_8RoaGA5IbNSoU2yOVETSW6J_Pz92zAIlnW15Adl10",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/items/5/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "items", "5", ""]
+        }
+      },
+      "response": []
+    }
+  ]
+}
